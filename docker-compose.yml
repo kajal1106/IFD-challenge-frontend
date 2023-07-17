@@ -1,0 +1,8 @@
+# In this configuration, we define a service named ui for the frontend. It builds the Docker image from the current directory (./), and maps port 8080 on the host machine to port 80 in the container.
+version: "3.8"
+
+services:
+  ui:
+    build: ./
+    ports:
+    - 8080:80
