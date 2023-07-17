@@ -91,8 +91,6 @@ To run the backend using Docker:
 ### Create New Ticket
 ![Create New Ticket](https://github.com/kajal1106/IFD-challenge-frontend/assets/39821430/06c2a6b4-2423-4562-abeb-8e52b568ba0d)
 
-### TODO
+## Author
 
-1. Currently, the docker-compose templates are different for both frontend and backend. Create a docker-compose.yml file in the root directory.
-
-2. I have indented the code for better readability. Please note that the indentation may vary depending on the formatting of the Markdown file in your specific environment.
+- LinkedIn - [Kajal Singh](https://www.linkedin.com/in/singhkajal/)
