@@ -1,46 +1,84 @@
-# Getting Started with Create React App
+# Ticket Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The Ticket Management System is a web application that allows users to create and manage tickets for various issues.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Use TypeScript, ReactJs, Material UI, and Styled Components to create the user interface.
+- Display a list of tickets, including their client name, issue message, deadline, and status.
+- The ticket status is represented by an icon with different colors based on the following conditions:
+  - Green: status = closed
+  - Yellow: status = open AND today < deadline
+  - Red: status = open AND today > deadline
+- Allow users to change the status of tickets using a slider button.
+- Include a button that generates a random ticket with a client name, issue message, and deadline within a range of now - 2 days and now + 2 days. Save the generated ticket using the REST API every time the button is clicked.
+  - Use Debounce to avoid concurrent generation of tickets.
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- TypeScript: A statically typed superset of JavaScript.
+- React: A JavaScript library for building user interfaces.
+- Material-UI: A popular React UI framework for creating beautiful and responsive designs.
+- Styled Components: A library for styling React components using CSS-in-JS.
+- Cypress: A testing framework for end-to-end testing.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Installation
 
-### `npm test`
+1. Clone the repository:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   ```shell
+   git clone https://github.com/kajal1106/IFD-challenge-frontend.git
 
-### `npm run build`
+2. Navigate to the project directory:
+  ```shell
+  cd IFD-challenge-frontend
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Install the dependencies:
+  ```shell
+  npm install
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. Start the development server:
+  ```shell
+  npm start
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+5. Open your web browser and visit `http://localhost:8080` to access the application.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Testing
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. The Ticket Management System uses Cypress for end-to-end testing. To run the tests, use the following command:
+  ```shell
+  npm run cypress:open
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Cypress will open a test runner window where you can select and run the tests.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## API Endpoint Configuration
+The frontend expects the backend API to be running at `http://localhost:3000`. Make sure to configure the backend accordingly.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Docker Configuration
+The backend includes a docker-compose.yml file and a Dockerfile for containerization. You can use Docker to run the backend in a containerized environment.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+To run the backend using Docker:
+
+1. Ensure that Docker is installed on your system.
+
+2. Open a terminal and navigate to the project directory.
+
+3. Run the following command to start the backend container:
+  ```shell
+   docker-compose up -d --build
+
+4. Ensure no other application is running on your machine's port 8080. The frontend application will start and be exposed from port 8080. To run the app locally, you can go to your browser and paste http://localhost:8080
+
+## UI Images
+
+### Ticket List
+![Ticket List](ticket-list.png)
+
+
+### Create New Ticket
+![Create New Ticket](create-ticket-modal.png)
+
+### TODO
+1. Currently, the docker-compose templates are different for both frontend and backend. Create a docker-compose.yml file in the root directory.
