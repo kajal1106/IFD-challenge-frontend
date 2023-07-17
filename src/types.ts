@@ -1,7 +1,7 @@
 export interface Ticket {
-  _id?: string;
-  client: string;
-  issue: string;
-  status: 'open' | 'closed';
-  deadline: string; // You can use the string type for the deadline or define a specific Date type if needed
+  _id?: string; // Optional ID field for existing tickets
+  client: string; // Client name
+  issue: string; // Issue message
+  status: 'open' | 'closed'; // Ticket status: open or closed
+  deadline: string; // Deadline for the ticket
 }
