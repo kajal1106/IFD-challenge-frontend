@@ -28,35 +28,44 @@ The Ticket Management System is a web application that allows users to create an
 
    ```shell
    git clone https://github.com/kajal1106/IFD-challenge-frontend.git
+   ```
 
 2. Navigate to the project directory:
-  ```shell
-  cd IFD-challenge-frontend
+  
+   ```shell
+   cd IFD-challenge-frontend
+   ```
 
 3. Install the dependencies:
-  ```shell
-  npm install
+  
+   ```shell
+   npm install
+   ```
 
 4. Start the development server:
-  ```shell
-  npm start
+  
+   ```shell
+   npm start
+   ```
 
 5. Open your web browser and visit `http://localhost:8080` to access the application.
-
 
 ### Testing
 
 1. The Ticket Management System uses Cypress for end-to-end testing. To run the tests, use the following command:
-  ```shell
-  npm run cypress:open
+  
+   ```shell
+   npm run cypress:open
+   ```
 
-Cypress will open a test runner window where you can select and run the tests.
-
+   Cypress will open a test runner window where you can select and run the tests.
 
 ## API Endpoint Configuration
+
 The frontend expects the backend API to be running at `http://localhost:3000`. Make sure to configure the backend accordingly.
 
 ## Docker Configuration
+
 The backend includes a docker-compose.yml file and a Dockerfile for containerization. You can use Docker to run the backend in a containerized environment.
 
 To run the backend using Docker:
@@ -66,19 +75,24 @@ To run the backend using Docker:
 2. Open a terminal and navigate to the project directory.
 
 3. Run the following command to start the backend container:
-  ```shell
+  
+   ```shell
    docker-compose up -d --build
+   ```
 
-4. Ensure no other application is running on your machine's port 8080. The frontend application will start and be exposed from port 8080. To run the app locally, you can go to your browser and paste http://localhost:8080
+4. Ensure no other application is running on your machine's port 8080. The frontend application will start and be exposed from port 8080. To run the app locally, you can go to your browser and paste http://localhost:8080.
 
 ## UI Images
 
 ### Ticket List
-![Ticket List](ticket-list.png)
+![Ticket List](https://github.com/kajal1106/IFD-challenge-frontend/assets/39821430/dee4d0c2-e94d-4c64-8414-7839c31209e4)
 
 
 ### Create New Ticket
-![Create New Ticket](create-ticket-modal.png)
+![Create New Ticket](https://github.com/kajal1106/IFD-challenge-frontend/assets/39821430/06c2a6b4-2423-4562-abeb-8e52b568ba0d)
 
 ### TODO
+
 1. Currently, the docker-compose templates are different for both frontend and backend. Create a docker-compose.yml file in the root directory.
+
+2. I have indented the code for better readability. Please note that the indentation may vary depending on the formatting of the Markdown file in your specific environment.
